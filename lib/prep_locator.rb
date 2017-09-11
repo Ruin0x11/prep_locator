@@ -22,6 +22,6 @@ module PrepLocator
     return unless query
 
     response = RestClient.post(MAIN_ENDPOINT, params(query))
-    JSON.parse!(response)
+    JSON.parse!(response, symbolize_names: true)
   end
 end
