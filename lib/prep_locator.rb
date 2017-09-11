@@ -18,7 +18,7 @@ module PrepLocator
       source: "prep" }
   end
 
-  def self.locations(query)
+  def self.search(query)
     response = RestClient.post(MAIN_ENDPOINT, params(query))
     JSON.parse!(response)
   end
