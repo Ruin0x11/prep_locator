@@ -19,6 +19,8 @@ module PrepLocator
   end
 
   def self.search(query)
+    return unless query
+
     response = RestClient.post(MAIN_ENDPOINT, params(query))
     JSON.parse!(response)
   end
